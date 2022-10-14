@@ -1,0 +1,126 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5B42A;
+    padding: 14px 40px;
+}
+/* ロゴの高さ */
+.logo{
+    height: 50px;
+}
+
+/* 親要素であるnavにflexboxを指定する */
+.nav{
+    display: flex;
+}
+
+/* navのliのaタグを指定/他にaタグを使用した際に分別できる */
+.nav > li > a{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.welcome{
+    /* ../で一つ上の階層を読み込める */
+    background-image: url(../img/background.png);
+    height: 100vh;
+    /* 読み込んだ写真が一枚に収まる */
+    background-size: cover;
+    /* 読み込んだ画像が繰り返されることを防ぐ */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 原色 */
+    /* カラーコード指定 */
+    /* rgb指定 */
+    color: #FFFFFF;
+}
+
+@media screen and (max-width:780px) {
+    .welcome {
+      height: 40vh;
+    }
+    
+}
+
+.title{
+    text-align: center;
+    font-size: 80px;
+}
+
+.guideline{
+    font-size: 40px;
+    /* 太字にする */
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width:780px) {
+    .title{
+        font-size: 28px;
+    }
+    .guideline{
+        font-size: 22px;
+    }
+}
+
+.guideline > li{
+    margin-top: 14px;
+}
+
+/* 同じ要素を当てたい場合 */
+#programming > h2, #engineer > h2 {
+    font-size: 40px;
+    text-align: center;
+    color: gray;
+    padding-top: 40px;
+}
+
+.contents > img{
+    height: 150px;
+}
+
+@media screen and (max-width:780px) {
+    /* order: ;で順番を指定 */
+    .contents > img {
+        order: 1;
+    }
+    .contents > p {
+        order: 2;
+    }
+}
+
+.contents{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* margin: 20px auto; */
+}
+
+@media screen and (max-width:780px) {
+    .contents {
+        /* 縦に表示する */
+        flex-direction: column;
+    }
+    
+}
+
+.description{
+    width: 50%;
+}
+
+footer{
+    text-align: center;
+    background-color: #F5B42A;
+    color: white;
+    padding: 20px 0;
+    margin-top: 100px;
+    font-size: 20px;
+}
